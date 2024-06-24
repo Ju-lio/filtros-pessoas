@@ -1,0 +1,19 @@
+<main>
+  <form>
+    <mat-form-field class="input-name">
+      <mat-label>Nome</mat-label>
+      <input matInput placeholder="Ex. Fulano da Silva" value="">
+    </mat-form-field>
+
+    <mat-form-field class="input-date">
+      <mat-label>Data de cadastro</mat-label>
+      <mat-date-range-input [rangePicker]="picker">
+        <input matStartDate placeholder="Data inicial">
+        <input matEndDate placeholder="Data final">
+      </mat-date-range-input>
+      <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-date-range-picker #picker></mat-date-range-picker>
+    </mat-form-field>
+  </form>
+</main>
