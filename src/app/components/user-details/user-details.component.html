@@ -2,24 +2,24 @@
   <h1>Detalhes do usuário</h1>
 </header>
 <mat-list>
-  <mat-list-item> <span class="title">Nome:</span> </mat-list-item>
+  <mat-list-item> <span class="title">Nome:</span> {{ user.nome }} </mat-list-item>
   <mat-divider></mat-divider>
-  <mat-list-item> <span class="title">Email:</span> </mat-list-item>
+  <mat-list-item> <span class="title">Email:</span> {{ user.email }} </mat-list-item>
   <mat-divider></mat-divider>
-  <mat-list-item> <span class="title">Senha:</span> </mat-list-item>
+  <mat-list-item> <span class="title">Senha:</span> {{ user.senha }} </mat-list-item>
   <mat-divider></mat-divider>
-  <mat-list-item> <span class="title">Idade:</span> </mat-list-item>
+  <mat-list-item> <span class="title">Idade:</span> {{ user.idade }} </mat-list-item>
   <mat-divider></mat-divider>
-  <mat-list-item> <span class="title">Endereço:</span> </mat-list-item>
+  <mat-list-item> <span class="title">Endereço:</span> {{ user.endereco.rua }} </mat-list-item>
   <mat-divider></mat-divider>
-  <mat-list-item> <span class="title">Telefone:</span> </mat-list-item>
+  <mat-list-item> <span class="title">Telefone:</span> {{ user.telefone }} </mat-list-item>
   <mat-divider></mat-divider>
-  <mat-list-item> <span class="title">Ativo:</span> </mat-list-item>
+  <mat-list-item> <span class="title">Ativo:</span> {{ user.ativo }} </mat-list-item>
   <mat-divider></mat-divider>
-  <mat-list-item> <span class="title">Função:</span> </mat-list-item>
+  <mat-list-item> <span class="title">Função:</span> {{ user.funcao }} </mat-list-item>
   <mat-divider></mat-divider>
-  <mat-list-item> <span class="title">Data cadastro:</span> </mat-list-item>
+  <mat-list-item> <span class="title">Data cadastro:</span> {{ user.dataCadastro }} </mat-list-item>
   <mat-divider></mat-divider>
-  <mat-list-item> <span class="title">Status:</span> </mat-list-item>
+  <mat-list-item> <span class="title">Status:</span> {{ user.status }} </mat-list-item>
   <mat-divider></mat-divider>
 </mat-list>

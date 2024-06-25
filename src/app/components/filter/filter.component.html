@@ -15,5 +15,16 @@
       <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-date-range-picker #picker></mat-date-range-picker>
     </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Status</mat-label>
+      <mat-select value="{{true}}">
+        <mat-option value="{{true}}">Ativo</mat-option>
+        <mat-option value="{{false}}">Inativo</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button mat-flat-button>Filtrar</button>
+
   </form>
 </main>

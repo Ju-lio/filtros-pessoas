@@ -5,15 +5,13 @@
   <section>
     <header class="section-header">
       <app-filter></app-filter>
-
     </header>
     <article>
-      <!-- Conteúdo da div esquerda (80% de altura) -->
-
+      <app-user-list></app-user-list>
     </article>
   </section>
   <aside>
-    <app-user-details></app-user-details>
+    <app-user-details [user]="userSelected"></app-user-details>
   </aside>
 </main>
 <footer>

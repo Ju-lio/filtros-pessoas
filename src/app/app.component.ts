@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UsersList } from './data/users-list';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'filtro-pessoas';
+
+  userSelected = UsersList[0];
 }

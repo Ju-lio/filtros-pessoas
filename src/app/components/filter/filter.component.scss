@@ -16,3 +16,19 @@ form {
 .input-name {
   width: 300px;
 }
+
+.filter-status {
+  width: 260px;
+  height: 56px;
+  background-color: #F3DDE1;
+  border-radius: 4px 4px 0 0;
+  border-bottom: 1px solid #514346;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  margin-bottom: 20px;
+
+  flex-wrap: wrap;
+}
