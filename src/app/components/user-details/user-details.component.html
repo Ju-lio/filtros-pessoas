@@ -10,16 +10,14 @@
   <mat-divider></mat-divider>
   <mat-list-item> <span class="title">Idade:</span> {{ user.idade }} </mat-list-item>
   <mat-divider></mat-divider>
-  <mat-list-item> <span class="title">Endereço:</span> {{ user.endereco.rua }} </mat-list-item>
+  <mat-list-item> <span class="title">Endereço:</span> {{ user.endereco | endereco }} </mat-list-item>
   <mat-divider></mat-divider>
-  <mat-list-item> <span class="title">Telefone:</span> {{ user.telefone }} </mat-list-item>
+  <mat-list-item> <span class="title">Telefone:</span> {{ user.telefone | phone }} </mat-list-item>
   <mat-divider></mat-divider>
-  <mat-list-item> <span class="title">Ativo:</span> {{ user.ativo }} </mat-list-item>
+  <mat-list-item> <span class="title">Status:</span> {{ user.ativo | ativo }} </mat-list-item>
   <mat-divider></mat-divider>
   <mat-list-item> <span class="title">Função:</span> {{ user.funcao }} </mat-list-item>
   <mat-divider></mat-divider>
-  <mat-list-item> <span class="title">Data cadastro:</span> {{ user.dataCadastro }} </mat-list-item>
-  <mat-divider></mat-divider>
-  <mat-list-item> <span class="title">Status:</span> {{ user.status }} </mat-list-item>
+  <mat-list-item> <span class="title">Data cadastro:</span> {{ user.dataCadastro | date }} </mat-list-item>
   <mat-divider></mat-divider>
 </mat-list>

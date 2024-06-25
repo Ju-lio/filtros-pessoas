@@ -1,8 +1,6 @@
 import { UsersList } from '../../data/users-list';
 import { IUser } from './../../interfaces/user/user.interface';
-import { Component } from '@angular/core';
-
-const userList: IUser[] = UsersList;
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-user-list',
@@ -11,10 +9,20 @@ const userList: IUser[] = UsersList;
 })
 
 export class UserListComponent {
-  displayedColumns: string[] = ['name','date','status'];
-  dataSource = userList;
 
-  public onUserSelected(user: IUser) {
+  @Output() userSelected = new EventEmitter<IUser>();  
 
+  onUserSelected(user: IUser) {
+    this.userSelected.emit(user);
   }
+
+  filtrar() {
+    // this.userList = UsersList.filter(user => (user.ativo === ));
+  }
+
+  displayedColumns: string[] = ['name','date','status'];
+
+  userList: IUser[] = {} as IUser[];
+
+  dataSource = UsersList;
 }

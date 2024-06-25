@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { UsersList } from './data/users-list';
+import { IUser } from './interfaces/user/user.interface';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +10,16 @@ import { UsersList } from './data/users-list';
 export class AppComponent {
   title = 'filtro-pessoas';
 
-  userSelected = UsersList[0];
+  userSelected: IUser = {} as IUser;
+  temUsuarioSelecionado: boolean = false;
+
+  onUserSelected(user: IUser) {
+    if (user === this.userSelected) {
+      this.userSelected = {} as IUser;
+      this.temUsuarioSelecionado  = false;
+    } else {
+      this.userSelected = user;
+      this.temUsuarioSelecionado  = Boolean(user.nome);
+    }
+  }
 }

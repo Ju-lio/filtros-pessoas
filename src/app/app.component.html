@@ -7,11 +7,11 @@
       <app-filter></app-filter>
     </header>
     <article>
-      <app-user-list></app-user-list>
+      <app-user-list (userSelected)="onUserSelected($event)"></app-user-list>
     </article>
   </section>
   <aside>
-    <app-user-details [user]="userSelected"></app-user-details>
+    <app-user-details *ngIf="temUsuarioSelecionado" [user]="userSelected"></app-user-details>
   </aside>
 </main>
 <footer>
