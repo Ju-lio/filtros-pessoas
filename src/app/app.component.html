@@ -2,12 +2,12 @@
 
 </header>
 <main>
-  <section>
+  <section hjfhjfhj>
     <header class="section-header">
-      <app-filter></app-filter>
+      <app-filter (selectedFilter)="onSelectedFilters()"></app-filter>
     </header>
     <article>
-      <app-user-list (userSelected)="onUserSelected($event)"></app-user-list>
+      <app-user-list [userList]="userList" (userSelected)="onUserSelected($event)"></app-user-list>
     </article>
   </section>
   <aside>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { IFilterOptions } from '../../interfaces/filter-options.interface';
 
 @Component({
   selector: 'app-filter',
@@ -8,4 +9,16 @@ import { Component } from '@angular/core';
 
 export class FilterComponent {
 
-}
+  @Output() selectedFilters = new EventEmitter<IFilterOptions>();
+
+  filterOptions: IFilterOptions = {
+    name: '',
+    startDate: '',
+    endDate: '',
+    status: '',
+  };
+
+  onSelectedFilters() {
+    this.selectedFilters.emit(this.filterOptions);
+  }
+};
