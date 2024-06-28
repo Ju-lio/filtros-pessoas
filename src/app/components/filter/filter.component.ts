@@ -9,8 +9,6 @@ import { IFilterOptions } from '../../interfaces/filter-options.interface';
 
 export class FilterComponent {
 
-  @Output() selectedFilters = new EventEmitter<IFilterOptions>();
-
   filterOptions: IFilterOptions = {
     name: '',
     startDate: '',
@@ -18,7 +16,9 @@ export class FilterComponent {
     status: '',
   };
 
-  onSelectedFilters() {
-    this.selectedFilters.emit(this.filterOptions);
+  @Output() filterOptionsEmitter = new EventEmitter<IFilterOptions>();
+
+  onFilterOptions() {
+    this.filterOptionsEmitter.emit(this.filterOptions);
   }
 };

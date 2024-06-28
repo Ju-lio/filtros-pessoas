@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { IUser } from './interfaces/user/user.interface';
 import { IFilterOptions } from './interfaces/filter-options.interface';
 
@@ -7,19 +7,11 @@ import { IFilterOptions } from './interfaces/filter-options.interface';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'filtro-pessoas';
   userList: IUser[] = []; 
   userSelected: IUser = {} as IUser;
   temUsuarioSelecionado: boolean = false;
-  // filterOptions: IFilterOptions = [];
-
-  ngOnInit(): void {
-    this.userList = this.processList(this.userList, this.filterOptions);
-  }
-  processList(userList: IUser[], filtefilterOptionsrs: IFilterOptions): IUser[] {
-    return userList;
-  }
 
   onUserSelected(user: IUser) {
     if (user === this.userSelected) {
@@ -31,7 +23,14 @@ export class AppComponent implements OnInit {
     }
   }
 
-  onSelectedFilters(filterOptions: IFilterOptions) {
-    filterOptions
+  filterOptions: IFilterOptions = {
+    name: '',
+    startDate: '',
+    endDate: '',
+    status: '',
+  };
+
+  onFilterOptions(filterOptions: IFilterOptions) {
+    this.userList = this.userList.filter((user) => user.ativo === filterOptions.status);
   }
 }

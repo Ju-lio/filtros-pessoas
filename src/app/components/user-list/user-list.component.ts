@@ -1,4 +1,3 @@
-import { UsersList } from '../../data/users-list';
 import { IUser } from './../../interfaces/user/user.interface';
 import { Component, Output, EventEmitter, Input } from '@angular/core';
 
@@ -18,11 +17,7 @@ export class UserListComponent {
     this.userSelected.emit(user);
   }
 
-  filtrar() {
-    // this.userList = UsersList.filter(user => (user.ativo === ));
-  }
-
   displayedColumns: string[] = ['name','date','status'];
 
-  dataSource = UsersList;
+  dataSource = this.userList;
 }
