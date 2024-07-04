@@ -11,13 +11,11 @@ export class UserListComponent {
 
   @Output() userSelected = new EventEmitter<IUser>();  
 
-  @Input({ required: true }) userList: IUser[] = [];
+  @Input({ required: true }) usersList: IUser[] = [];
 
   onUserSelected(user: IUser) {
     this.userSelected.emit(user);
   }
 
   displayedColumns: string[] = ['name','date','status'];
-
-  dataSource = this.userList;
 }

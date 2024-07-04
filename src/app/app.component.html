@@ -7,7 +7,7 @@
       <app-filter (filterOptionsEmitter)="onFilterOptions($event)"></app-filter>
     </header>
     <article>
-      <app-user-list [userList]="userList" (userSelected)="onUserSelected($event)"></app-user-list>
+      <app-user-list [usersList]="filterList(usersList, filterOptions)" (userSelected)="onUserSelected($event)"></app-user-list>
     </article>
   </section>
   <aside>
